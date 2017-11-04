@@ -161,8 +161,6 @@ app.delete("/movielist/:id", (req, res) =>{
 
 
 // 3000 portundan bir server yaratıyorum, => bu işaret ES6 ile geliyor normal kullanımı function(){} şeklinde
-var server = app.listen(3000, (error) =>{
-    if(!error){
-        console.log('App Started. Port Number: %d',server.address().port )
-    }
-});
+var server = app.listen(process.env.PORT || 3000, function(){
+    console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
+  });
