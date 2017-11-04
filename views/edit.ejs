@@ -1,0 +1,44 @@
+<% include ./partials/header %>
+<form action="/movielist/<%= movie._id %>?_method=PUT" method="POST">
+<table class="mdl-data-table mdl-js-data-table">
+<tbody>
+        <tr>
+            <td class="mdl-data-table__cell--non-numeric">Movie Name</td>
+            <td class="mdl-data-table__cell--non-numeric">
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <input class="mdl-textfield__input" type="text" id="sample3" name="movie[name]" value="<%= movie.name %>">
+                <label class="mdl-textfield__label" for="sample3">Movie Name...</label>
+            </div>
+            </td>
+        </tr>
+        <tr>
+            <td class="mdl-data-table__cell--non-numeric">Image</td>
+            <td class="mdl-data-table__cell--non-numeric">
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                    <input class="mdl-textfield__input" type="text" id="sample3" name="movie[image]" value="<%= movie.image %>">
+                    <label class="mdl-textfield__label" for="sample3">Image...</label>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td class="mdl-data-table__cell--non-numeric">Trailer</td>
+            <td class="mdl-data-table__cell--non-numeric">
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                    <input class="mdl-textfield__input" type="text" id="sample3" name="movie[trailer]" value="<%= movie.trailer %>">
+                    <label class="mdl-textfield__label" for="sample3">Trailer...</label>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td class="mdl-data-table__cell--non-numeric">
+                <a href="/movielist" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored">Cancel</a>
+            </td>
+            <td class="mdl-data-table__cell--non-numeric">
+                <input class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" type="submit" value="Save">
+            </td>
+        </tr>
+</tbody>
+</table>
+
+</form>
+<% include ./partials/footer %>

@@ -1,0 +1,26 @@
+<% include ./partials/header %>
+<div class="mdl-grid">
+<% movies.forEach(function(movie){ %>
+        <div class="mdl-cell mdl-cell--4-col">
+            <div class="mdl-card">
+                <div class="mdl-card__title">
+                        <%= movie.name %>
+                </div>
+                <div class="mdl-card__media">
+                <img src="<%= movie.image %>" alt="" style="margin:0 auto; display:block; max-height:268px;">
+                </div>
+                <div class="mdl-card__supporting-text">
+                        <strong>Trailer</strong>:
+                        <a href="<%= movie.trailer %>" target="_blank"><%= movie.trailer %></a>
+                </div>
+                <div class="mdl-card__actions">
+                        <a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" href="/movielist/<%= movie._id %>">detail</a>
+                </div>
+            </div>
+        </div>
+<% }); %>
+
+
+</div>
+
+<% include ./partials/footer %>
