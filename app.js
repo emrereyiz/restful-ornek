@@ -7,7 +7,9 @@ const   bodyParser          = require('body-parser'),
 //App config
 
 //db baglantisi
-mongoose.connect("mongodb://localhost/restfulApp",{ useMongoClient: true });
+mongoose.connect("mongodb://reyiz:reyiz@reyiz-shard-00-00-zzstr.mongodb.net:27017,reyiz-shard-00-01-zzstr.mongodb.net:27017,reyiz-shard-00-02-zzstr.mongodb.net:27017/test?ssl=true&replicaSet=Reyiz-shard-0&authSource=admin",{ useMongoClient: true });
+//mongoose.connect("mongodb://kay:reyiz@reyiz-shard-00-00-wpeiv.mongodb.net:27017,reyiz-shard-00-01-wpeiv.mongodb.net:27017,reyiz-shard-00-02-wpeiv.mongodb.net:27017/admin?ssl=true&replicaSet=Reyiz-shard-0&authSource=admin");
+
 // dosyalarımı kullanma durumunda tekrar tekrar ejs yazmamam için en baştan
 app.set('view engine', 'ejs');
 // statik klasörümü paylaşıyorum
@@ -123,7 +125,6 @@ app.post("/movielist/", (req, res) => {
 // Aşama 7 ## ROUTE 4. SHOW
 app.get("/movielist/:id", (req, res) => {
     Movie.findById(req.params.id, (err, findMovie) => {
-        console.log(findMovie)
         if(!err){
             res.render("detail", {movie: findMovie});
         }
@@ -144,8 +145,6 @@ app.put("/movielist/:id", (req, res) =>{
     Movie.findByIdAndUpdate(req.params.id, req.body.movie, (err, findMovie) => {
         if(!err){
             res.redirect("/movielist/"+req.params.id);
-        }else{
-            console.log(err)
         }
     })
 });
