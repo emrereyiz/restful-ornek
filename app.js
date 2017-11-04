@@ -1,7 +1,6 @@
 const   bodyParser          = require('body-parser'),
         mongoose            = require('mongoose'),
         methodOverride      = require('method-override'),
-        expressSanitizer    = require('express-sanitizer'),
         express             = require('express'),
         app                 = express();
 
@@ -9,14 +8,12 @@ const   bodyParser          = require('body-parser'),
 
 //db baglantisi
 mongoose.connect("mongodb://localhost/restfulApp",{ useMongoClient: true });
-// dosyalarımı kullanma durumunda tekrar tekrar ejs yazmamam için en baştna tanımlıyorum
+// dosyalarımı kullanma durumunda tekrar tekrar ejs yazmamam için en baştan
 app.set('view engine', 'ejs');
 // statik klasörümü paylaşıyorum
 app.use(express.static('public'));
 // form içlerine düzgünce ulaşmak için kullanıyorum
 app.use(bodyParser.urlencoded({extended:true}));
-// örnekte gördüm henüz bilmiyorum
-app.use(expressSanitizer());
 // form method'larına ?_method= PUT, ya da DELETE şeklinde kullanabilirim.
 app.use(methodOverride("_method"));
 
@@ -142,7 +139,7 @@ app.get("/movielist/:id/edit", (req, res) =>{
     })
 });
 
-// Aşama 8 ## ROUTE 5. UPDATE
+// Aşama 8 ## ROUTE 6. UPDATE
 app.put("/movielist/:id", (req, res) =>{
     Movie.findByIdAndUpdate(req.params.id, req.body.movie, (err, findMovie) => {
         if(!err){
@@ -153,7 +150,7 @@ app.put("/movielist/:id", (req, res) =>{
     })
 });
 
-// Aşama 9 ## ROUTE 6. DESTROY
+// Aşama 9 ## ROUTE 7. DESTROY
 app.delete("/movielist/:id", (req, res) =>{
     Movie.findByIdAndRemove(req.params.id, (err) => {
         if(!err){
