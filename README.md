@@ -1,39 +1,46 @@
-RESTful Routes
+<h1>RESTful Routes</h1>
 
-Yapıyı öğrenmek için 7 route tekniğini uyguladım.
+<p>Yapıyı öğrenmek için 7 route tekniğini uyguladım.</p>
 
-Sırasıyla;
-Route Adı: Index
-Örnek Yapı: /product
-HTTP Verb: GET
-Yemek.find()
+<p><strong>Sırasıyla;</strong></p>
 
-Route Adı: New
-Örnek Yapı: /product/new
-HTTP Verb: GET
-N/A
+<strong>Route Adı:</strong> Index
+<strong>Örnek Yapı:</strong> /product
+<strong>HTTP Verb:</strong> GET
+<strong>Method: </strong> Yemek.find()
 
-Route Adı: Create
-Örnek Yapı: /product
-HTTP Verb: POST
-Yemek.create()
 
-Route Adı: Show
-Örnek Yapı: /product/:id
-HTTP Verb: GET
-Yemek.findById()
+<strong>Route Adı:</strong> New
+<strong>Örnek Yapı:</strong> /product/new
+<strong>HTTP Verb:</strong> GET
+<strong>Method: </strong> N/A
 
-Route Adı: Edit
-Örnek Yapı: /product/:id/edit
-HTTP Verb: GET
-Yemek.findById()
 
-Route Adı: Update
-Örnek Yapı: /product/:id
-HTTP Verb: PUT
-Yemek.findByIdAndUpdate()
+<strong>Route Adı:</strong> Create
+<strong>Örnek Yapı:</strong> /product
+<strong>HTTP Verb:</strong> POST
+<strong>Method: </strong> Yemek.create()
 
-Route Adı: Destroy
-Örnek Yapı: /product/:id
-HTTP Verb: DELETE
-Yemek.findByIdAndRemove()
+
+<strong>Route Adı:</strong> Show
+<strong>Örnek Yapı:</strong> /product/:id
+<strong>HTTP Verb:</strong> GET
+<strong>Method: </strong> Yemek.findById()
+
+
+<strong>Route Adı:</strong> Edit
+<strong>Örnek Yapı:</strong> /product/:id/edit
+<strong>HTTP Verb:</strong> GET
+<strong>Method: </strong> Yemek.findById()
+
+
+<strong>Route Adı:</strong> Update
+<strong>Örnek Yapı:</strong> /product/:id
+<strong>HTTP Verb:</strong> PUT
+<strong>Method: </strong> Yemek.findByIdAndUpdate()
+
+
+<strong>Route Adı:</strong> Destroy
+<strong>Örnek Yapı:</strong> /product/:id
+<strong>HTTP Verb:</strong> DELETE
+<strong>Method: </strong> Yemek.findByIdAndRemove()
