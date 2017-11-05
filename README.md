@@ -7,7 +7,7 @@
 <strong>Route Adı:</strong> Index <br >
 <strong>Örnek Yapı:</strong> /product <br >
 <strong>HTTP Verb:</strong> GET <br >
-<strong>Method: </strong> Yemek.find() <br > <br >
+<strong>Method: </strong> Product.find() <br > <br >
 
 
 
@@ -21,32 +21,32 @@
 <strong>Route Adı:</strong> Create <br >
 <strong>Örnek Yapı:</strong> /product <br >
 <strong>HTTP Verb:</strong> POST <br >
-<strong>Method: </strong> Yemek.create() <br > <br >
+<strong>Method: </strong> Product.create() <br > <br >
 
 
 
 <strong>Route Adı:</strong> Show <br >
 <strong>Örnek Yapı:</strong> /product/:id <br >
 <strong>HTTP Verb:</strong> GET <br >
-<strong>Method: </strong> Yemek.findById() <br > <br >
+<strong>Method: </strong> Product.findById() <br > <br >
 
 
 
 <strong>Route Adı:</strong> Edit <br >
 <strong>Örnek Yapı:</strong> /product/:id/edit <br >
 <strong>HTTP Verb:</strong> GET <br >
-<strong>Method: </strong> Yemek.findById() <br > <br >
+<strong>Method: </strong> Product.findById() <br > <br >
 
 
 
 <strong>Route Adı:</strong> Update <br >
 <strong>Örnek Yapı:</strong> /product/:id <br >
 <strong>HTTP Verb:</strong> PUT <br >
-<strong>Method: </strong> Yemek.findByIdAndUpdate() <br > <br >
+<strong>Method: </strong> Product.findByIdAndUpdate() <br > <br >
 
 
 
 <strong>Route Adı:</strong> Destroy <br >
 <strong>Örnek Yapı:</strong> /product/:id <br >
 <strong>HTTP Verb:</strong> DELETE <br >
-<strong>Method: </strong> Yemek.findByIdAndRemove()
+<strong>Method: </strong> Product.findByIdAndRemove()
